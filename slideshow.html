@@ -1,0 +1,132 @@
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bomarzo's Park of the Monsters</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+	<link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+	<style>
+	body {
+		margin: 0;
+		font-family: 'Cinzel', serif;
+		font-weight: 150;
+		font-size:25px;
+	}
+	</style>
+    </head>
+    <body>
+	<p>A photo assignment for Digital Photography 1 during the 2009 Winterintersession in Bomarzo, Italy.</p>
+        <img id="image" src="images/1.jpg" alt="">
+        <script src="jquery-1.11.0.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script type="text/javascript">
+
+        $('.fade').slick({
+            dots: true,
+            speed: 500,
+            fade:true,
+            slide: '> div',
+            cssEase: 'linear'
+        })
+
+		var images = [
+    			{
+        			src: 'images/1.jpg',
+        			width: 960,
+        			height: 640
+    			}, {
+        			src: 'images/2.jpg',
+        			width: 960,
+        			height: 640
+    			}, {
+        			src: 'images/3.jpg',
+        			width: 960,
+        			height: 640
+    			}, {
+        			src: 'images/4.jpg',
+        			width: 960,
+        			height: 640
+    			}, {
+        			src: 'images/5.jpg',
+        			width: 960,
+        			height: 640
+    			}, {
+        			src: 'images/6.jpg',
+        			width: 960,
+        			height: 640
+    			}, {
+        			src: 'images/7.jpg',
+        			width: 960,
+        			height: 640
+			}, {
+        			src: 'images/8.jpg',
+        			width: 960,
+        			height: 640
+    			}, {
+        			src: 'images/9.jpg',
+        			width: 960,
+        			height: 640
+    			}, {
+        			src: 'images/10.jpg',
+        			width: 960,
+        			height: 640
+    			}, {
+        			src: 'images/11.jpg',
+        			width: 640,
+        			height: 960
+    			}, {
+        			src: 'images/12.jpg',
+        			width: 960,
+        			height: 640
+    			}
+		];
+
+		var num = 0;
+		var max = images.length - 11;
+		resizeImage();
+		$('#image').click(function() {
+    		num++;
+		if (num > max) {
+        	num = 0;
+
+    		}
+    		var image = images[num];
+    		this.src = image;
+		resizeImage();
+		});
+
+		$(window).resize(resizeImage);
+
+	var position = 1;
+        var maxPosition = 12;
+        
+        function nextImage() {
+            position++;
+            if (position > maxPosition) {
+                position = 1;
+            }
+            $('#image').fadeOut(400, function() {
+                $('#image').attr('src', 'images/' + position + '.jpg');
+                $('#image').fadeIn(400);
+            });
+        }
+        
+        $('#image').click(nextImage);
+
+function resizeImage() {
+    var image = images[num];
+    var ratio = image.width / image.height;
+    var width = $(window).width();
+    var height = width / ratio;
+    $('#image').css('width', width);
+    $('#image').css('height', height);
+}
+
+
+	</script>
+    </body>
+</html>

@@ -1,0 +1,129 @@
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1 {
+font-family: 40px 'Montserrat', sans-serif;
+color:#000;
+text-align: center;
+padding-bottom: -50px;
+}
+
+body {
+	background: url('grad.png') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+    line-height: 25px;
+}
+
+#profile{
+	float:left;
+	margin: 5px;
+	border: 4px solid #000;
+	margin: 45px 20px 10px;
+}
+
+#nav ul {
+	text-align: center;
+	display: block;
+	padding-top: 200px;
+	font-family: "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	font-size:25px;
+	background: none repeat scroll ;
+	-moz-box-sizing: border-box;
+} 
+
+a:hover,
+a:focus {
+	outline: none;
+}
+
+a {
+	margin: 0 20px;
+	padding: 18px 20px;
+}
+
+a::before,
+a::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	content: '';
+	opacity: 0.2;
+	-webkit-transition: opacity 0.3s, height 0.3s;
+	-moz-transition: opacity 0.3s, height 0.3s;
+	transition: opacity 0.3s, height 0.3s;
+}
+
+a::after {
+	top: 100%;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+a span:first-child {
+	z-index: 2;
+	display: block;
+	font-weight: 300;
+}
+
+a span:last-child {
+	z-index: 1;
+	padding: 8px 0 0 0;
+	color: rgba(0,0,0,0.4);
+	text-shadow: none;
+	text-transform: none;
+	font-style: italic;
+	font-size: 0.75em;
+	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+a:hover::before,
+a:focus::before {
+	height: 6px;
+}
+
+a:hover::before,
+a:hover::after,
+a:focus::before,
+a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+a:hover span:last-child,
+a:focus span:last-child {
+	opacity: 1;
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	transform: translateY(0%);
+}

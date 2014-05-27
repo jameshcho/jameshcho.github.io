@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Apple Surprise</title>
+	<style>
+
+	body {
+	    font: 18px/30px helvetica;
+	    width:60%;
+	    margin:auto;
+	}
+
+	span {
+	background: #D8D8D8;
+}
+
+h1 {
+color:#8B0000;
+font: 50px gill sans, regular;
+}
+
+h3 {
+color:#33FF33;
+font: 15px helvetica, italic;
+}
+
+	</style>
+	</head>
+	<body>
+	<h1>Apple Surprise</h1>
+	<p><span id="date" data-prompt=" a date">______</span> What was supposed to be a routine apple-picking trip turned into something much more. <span id="someone 1" data-prompt=" someone's name">______</span> and <span id="someone 2" data-prompt=" someone else's name">______</span> went to <span id="place" data-prompt=" a place">______</span>'s farm to pick apples. This was a funny sort of farm! To get to the orchard, they rode on <span id="vehicle" data-prompt=" a vehicle">______</span> driven by <span id="famous 1" data-prompt=" a famous person">______</span>! <span id="first" data-prompt=" first person's name">______</span> and <span id="second" data-prompt=" second person's name">______</span> went about picking their apples, and they filled two big bags with the most <span id="color" data-prompt=" a color">______</span> apples they had ever seen.<br><p></p></br>Suddenly, <span id="famous 2" data-prompt=" another famous person">______</span> happened to ride by on a(n) <span id="animal" data-prompt=" animal">______</span> and offered to turn the apples into a delicious pie, right there in the orchard. <span id="first person" data-prompt=" first person's name">______</span> and <span id="second person" data-prompt=" second person's name">______</span> didn't believe that this was possible, but they agreed. <span id="famous second" data-prompt=" second famous person">______</span> told them to close their eyes, and before they knew it, the apples were steaming, hot apple pies. <span id="2" data-prompt=" second person's name">______</span> and <span id="1" data-prompt=" first person's name">______</span> couldn't believe their eyes! They were so amazed, they ran home and called <span id="newspaper" data-prompt=" a newspaper">______</span>. When <span id="the place" data-prompt=" the place">______</span> was contacted about this matter, a reporter was informed that this miracle was just a really <span id="adjective" data-prompt=" an adjective">______</span> practical joke!</p>
+	<h3>Wacky Web Tales</h3>
+	<script type="text/javascript">
+
+var placeholders = [
+	'date',
+	'someone 1',
+	'someone 2',
+	'place',
+	'vehicle',
+	'famous 1',
+	'first',
+	'second',
+	'color',
+	'first person',
+	'second person',
+	'famous 2',
+	'famous second',
+	'2',
+	'1',
+	'newspaper',
+	'animal',
+	'the place',
+	'adjective'
+];
+	
+for (var i = 0; i < placeholders.length; i++) {
+	var id = placeholders[i];
+	var span = document.getElementById(id);
+	span.addEventListener('click', replaceWord, false);
+}
+
+function replaceWord(e) {
+	var span = e.target;
+	var wordPrompt = span.getAttribute('data-prompt');
+	var word = prompt('Enter' + wordPrompt);
+	if (word !== null) {
+	span.innerHTML = word;
+	}
+}
+
+	</script>
+	</body>
+</html>

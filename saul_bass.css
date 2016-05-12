@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.container {
+	width:940px;
+	margin: 0 auto;
+	padding: 0px 10px;
+	background-color: #FFFFFF;
+	background-image: url(_images/graygrid.gif);
+	overflow:auto;
+	border: 10px solid white;
+	border-radius: 20px;
+}
+
+body {
+	font: 12px Helvetica, Arial, black;
+	background-color:#000000;
+}
+
+h1 {
+	font-size: 93px;
+	margin-bottom: 0;
+}
+
+nav {
+	 position:fixed;
+	 font-size: 12px;
+	 float: right;
+	 margin-top: -90px;
+	 margin-right: -85px;
+	 margin-bottom:2px;
+	 display:block;
+	 width:240px;
+}
+
+nav a:link,a:visited {
+
+	display:block;
+	color:808080;
+	background-color:#F0F0F0;
+	width:150px;
+	text-align:right;
+	padding:2px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+nav a:hover,a:active {
+	background-color:#000000;
+}
+
+.links { float: right;}
+.header { height: 160px;}
+div.intro {
+	border-top: 10px solid black;
+	padding-top: 30px;
+}
+p.intro {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 24px;
+	width: 460;
+	margin: 0;
+	float: left;
+	padding-right: 20px;
+}
+p { width: 220px; float: left; font-weight: bold; color:#555555;}
+p.intro {color: black;}
+p.width1 { padding-right: 20px;}
+.width1, .width2, p.life, .description, p.logos {line-height: 1.5em; font-size: 13px;}
+.box {
+	width: 460px;
+	padding-bottom: 0px;
+	float: left;
+	clear: left;
+}
+/*Saul Bass Image*/
+.bass { width: 460px; display: block; float:right;}
+.collection {
+	float: left;
+	width: 940px;
+	padding-bottom: 100px;
+	padding-top: 40px;
+}
+
+/*Movie Poster*/
+div.movie_posters {
+	border-top: 7px solid black;
+	width: 700px;
+	padding-bottom: 170px;
+	float: left;
+}
+.box2 { width: 460px; padding-right: 20px; float: left;}
+.description {width: 460px;}
+
+.shinning {
+	width: 220px;
+	float:left;
+	padding-top: 13px;
+}
+
+/*Early Life*/
+div.early_life {
+	width: 220px;
+	border-top: 7px solid black;
+	margin-right: 20px;
+	float: left;
+}
+
+/*Logos*/
+.images, .images2, .images4 {
+	width: 220px;
+	float: left;
+	padding: 10px 10px;
+}
+.images2, .images4 {
+	padding-right: 0px;
+}
+div.logos { border-top: 7px solid black; width: 940px; float:left;}
+.box3 { width: 460px; float: left; padding-right: 10px;}
+.logo_collection {width: 470px; float: right;}
+.image, div.about {
+	width: 220px;
+	padding-right: 20px;
+	float: left;
+}
+div.about {
+	font-size: 10px;
+	padding-right: 0px;
+	width: 200px;
+}
+
+p.margin { margin: 0;}
+p.logos {
+	width: 460px;
+	float: left;
+	margin: 0;
+}
+.companies {width: 220px; text-align: right; float: right; margin-top: 30px; padding-right: 10px;}

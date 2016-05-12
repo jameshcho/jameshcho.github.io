@@ -16,7 +16,11 @@ transition: text-shadow 2s cubic-bezier(0, 1, 0, 1);
 
 div.container:hover .txt {
 text-shadow: #000 0 0;
+<<<<<<< HEAD
 transition: text-shadow 8s cubic-bezier(0, 0.75, 0, 1);
+=======
+transition: text-shadow 1s cubic-bezier(0, 0.75, 0, 1);
+>>>>>>> origin/master
 }
 
 div.container{

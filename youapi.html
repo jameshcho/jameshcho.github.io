@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+      function appendResults(text) {
+        var results = document.getElementById('results');
+        results.appendChild(document.createElement('P'));
+        results.appendChild(document.createTextNode(text));
+      }
+
+      function makeRequest() {
+        var request = gapi.client.youtube.search.list.get({
+          'shortUrl': 'https://www.googleapis.com/youtube/v3/search'
+        });
+        request.execute(function(response) {
+          appendResults(response.longUrl);
+        });
+      }
+
+      function load() {
+        gapi.client.setApiKey('AIzaSyBD-gFBsAnQUPVPra7cG28A3ERhJgj93lE');
+        gapi.client.load('youtube', 'v3', makeRequest);
+      }
+    </script>
+    <script src="https://apis.google.com/js/client.js?onload=load"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="swfobject.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="search.js"></script>
+    <script src="auth.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+    <title>Youtube API</title>
+  <style>
+    body {
+        background: url('hex.png') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+  </style>
+  </head>
+  <body>
+    <div id="ytapiplayer" align="center">
+    <p>You will need Flash 8 or better to view this content.</p>
+    <a href="javascript:void(0);" onclick="play();">Play</a>
+    <a href="javascript:void(0);" onclick="pause();">Pause</a>
+    <a href="javascript:void(0);" onclick="stop();">Stop</a>
+    </div>
+    <br>
+    <div id="buttons" align="center">
+      <label> <input id="query" value='' type="text" placeholder='Search'/><button id="search-button" onclick="search()">Search</button></label>
+    </div>
+    <div id="search-container" align="center">
+    </div>
+  </body>
+</html>
